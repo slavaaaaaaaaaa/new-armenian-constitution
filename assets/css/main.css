@@ -24,9 +24,9 @@
   /* Tally bar and swatches; same in both themes. */
   --sw-new: #2f6feb; --sw-chg: #d9730d; --sw-rem: #c42b3c; --sw-kept: #8f9089;
   --flag-red: #c42b3c; --flag-blue: #1f4fbf; --flag-apricot: #e8962e;
-  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-display: "Inter Tight", "Inter", "Noto Sans Armenian", system-ui, sans-serif;
+  --font-body: "Inter", "Noto Sans Armenian", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Noto Sans Armenian", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --font-hy: "Noto Sans Armenian", "Inter", sans-serif;
   color-scheme: light;
 }
@@ -99,6 +99,8 @@ h1 {
   margin: 0; font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2.4rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em; text-wrap: balance;
 }
+/* Armenian words run long; keep the longest one inside a phone-width column. */
+h1:lang(hy) { font-size: clamp(1.9rem, 8vw, 4.25rem); line-height: 1.08; overflow-wrap: break-word; }
 .hy-sub { margin: 0; font-family: var(--font-hy); font-weight: 500; font-size: 1.375rem; color: var(--text3); }
 .about { margin: 0; max-width: 620px; font-size: 1.125rem; line-height: 1.55; color: var(--text2); }
 .lede { margin: 0; max-width: 620px; font-size: 0.9375rem; color: var(--muted); }

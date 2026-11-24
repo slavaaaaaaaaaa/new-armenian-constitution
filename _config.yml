@@ -8,7 +8,7 @@ proposed_article_url: https://yourconstitution.am/hy/constitution/proposed/artic
 current_article_url: https://yourconstitution.am/hy/constitution/current/article/
 explainer_url: https://yourconstitution.am/hy/changes
 
-languages: [en, ru]
+languages: [en, ru, hy]
 
 exclude:
   - README.md

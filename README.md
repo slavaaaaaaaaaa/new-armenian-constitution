@@ -1,6 +1,6 @@
 # Armenia's draft constitution: what changes
 
-A plain-language, English/Russian guide to the draft constitution of Armenia
+A plain-language English/Russian/Armenian guide to the draft constitution of Armenia
 published on 23 Nov 2026. Each point links to the exact article on
 [yourconstitution.am](https://yourconstitution.am/hy/constitution/proposed/article/1).
 
@@ -12,9 +12,9 @@ All content lives in `_data/`:
 
 - `sections.yml`: the provisions, grouped by section. Each item has a `tag`
   (`new`, `chg`, `rem`, `kept`), optional `hot: true` for contested
-  points, `en`/`ru` text, an optional Armenian `quote`, and `refs`.
+  points, `en`/`ru`/`hy` text, an optional Armenian `quote`, and `refs`.
 - `ui.yml`: interface strings for each language.
-- `status.yml`: the "Where it stands" list.
+- `status.yml`: the "Where it stands" panel: `steps`, `seats` and `notes`.
 
 A ref is one of:
 

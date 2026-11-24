@@ -28,11 +28,12 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
   <link rel="alternate" hreflang="ru" href="{{ '/ru/' | absolute_url }}">
+  <link rel="alternate" hreflang="hy" href="{{ '/hy/' | absolute_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
   <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Noto+Sans+Armenian:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </head>
@@ -54,6 +55,7 @@
       <nav class="lang" aria-label="Language">
         <a href="{{ '/' | relative_url }}" hreflang="en" lang="en" title="English"{% if L == "en" %} aria-current="page"{% endif %}>EN</a>
         <a href="{{ '/ru/' | relative_url }}" hreflang="ru" lang="ru" title="Русский"{% if L == "ru" %} aria-current="page"{% endif %}>RU</a>
+        <a href="{{ '/hy/' | relative_url }}" hreflang="hy" lang="hy" title="Հայերեն"{% if L == "hy" %} aria-current="page"{% endif %}>ՀՅ</a>
       </nav>
     </div>
   </div>
@@ -67,7 +69,9 @@
         <span>{{ u.dates }}</span>
       </div>
       <h1 id="hero-title">{{ u.title }}</h1>
+      {%- unless L == "hy" %}
       <p class="hy-sub" lang="hy">Նոր Սահմանադրության նախագիծ</p>
+      {%- endunless %}
       <p class="about">{{ u.about }}</p>
       <p class="lede">{{ u.lede }}</p>
     </div>
@@ -170,7 +174,7 @@
             <h3>{{ it[L].h }}</h3>
             <p>{{ it[L].p }}</p>
             {%- if it.quote %}
-            <blockquote class="hy" lang="hy">{{ it.quote.hy }}<span class="tr" lang="{{ L }}">{{ it.quote[L] }}</span></blockquote>
+            <blockquote class="hy" lang="hy">{{ it.quote.hy }}{% unless L == "hy" %}<span class="tr" lang="{{ L }}">{{ it.quote[L] }}</span>{% endunless %}</blockquote>
             {%- endif %}
           </div>
           <div class="refs">

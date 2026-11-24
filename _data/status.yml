@@ -4,17 +4,21 @@ steps:
 - state: done
   en: { when: Done · 23 Nov 2026, what: Draft published }
   ru: { when: Готово · 23.11.2026, what: Проект опубликован }
+  hy: { when: Արված է · 23.11.2026, what: Նախագիծը հրապարակվել է }
 - state: now
   url: https://yourconstitution.am/hy
   src: yourconstitution.am
   en: { when: Now · no end date announced, what: Public discussion }
   ru: { when: Сейчас · дата окончания не объявлена, what: Общественное обсуждение }
+  hy: { when: Հիմա · ավարտի ամսաթիվը հայտարարված չէ, what: Հանրային քննարկում }
 - state: next
   en: { when: Next · needs 70 of 105 MPs, what: Parliament sends it to a referendum }
   ru: { when: Далее · нужно 70 из 105 депутатов, what: Парламент выносит проект на референдум }
+  hy: { when: Հաջորդը · անհրաժեշտ է 105-ից 70 պատգամավոր, what: Խորհրդարանը նախագիծը դնում է հանրաքվեի }
 - state: next
   en: { when: Then · or snap elections, what: Referendum }
   ru: { when: Затем · или досрочные выборы, what: Референдум }
+  hy: { when: Հետո · կամ արտահերթ ընտրություններ, what: Հանրաքվե }
 
 seats:
   held: 64
@@ -34,6 +38,13 @@ seats:
     note: Обе оппозиционные фракции отказываются дать недостающие шесть голосов.
     src: Медуза
     url: https://meduza.io/news/2026/11/23/pashinyan-opublikoval-proekt-novoy-konstitutsii-armenii-po-trebovaniyu-azerbaydzhana-iz-nee-isklyuchili-otsylku-k-vossoedineniyu-s-nagornym-karabahom
+  hy:
+    held: մանդատ «Քաղաքացիական պայմանագրի» մոտ
+    missing: պակասում է մինչև 70-ը
+    total: մանդատ ընդամենը
+    note: Ընդդիմադիր երկու խմբակցություններն էլ հրաժարվում են տրամադրել պակասող վեց ձայնը։
+    src: Meduza
+    url: https://meduza.io/en/news/2026/11/23/armenia-unveils-draft-constitution-removing-reference-to-nagorno-karabakh-reunification-in-concession-to-azerbaijan
 
 notes:
   en:
@@ -48,5 +59,12 @@ notes:
     url: https://armenpress.am/en/article/1266364
     src: Арменпресс
   - t: Пашинян обещает уйти в отставку, если проект отвергнут, и не баллотироваться снова, если его примут.
+    url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
+    src: AP
+  hy:
+  - t: Իշխող կուսակցությունն ասում է, որ ընտրությունը հանրաքվեի և արտահերթ ընտրությունների միջև է։
+    url: https://armenpress.am/en/article/1266364
+    src: Արմենպրես
+  - t: Փաշինյանը խոստանում է հրաժարական տալ, եթե ընտրողները մերժեն նախագիծը, և այլևս չառաջադրվել, եթե այն ընդունվի։
     url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
     src: AP

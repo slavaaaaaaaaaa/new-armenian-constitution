@@ -11,7 +11,7 @@
   {%- assign label = u.explainer -%}
 {%- elsif r.ctx -%}
   {%- assign url = r.url -%}
-  {%- assign label = r.label[include.lang] -%}
+  {%- assign label = r.label[include.lang] | default: r.label.en -%}
 {%- else -%}
   {%- if r.cur -%}
     {%- assign url = site.current_article_url | append: r.cur -%}
