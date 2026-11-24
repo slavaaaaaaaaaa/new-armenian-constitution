@@ -23,6 +23,7 @@
 <body>
 <div class="wrap">
   <header class="top">
+    <p class="about">{{ u.about }}</p>
     <div class="topline">
       <span class="eyebrow">{{ u.eyebrow }}</span>
       <nav class="lang" aria-label="Language">
@@ -39,6 +40,7 @@
       <span><span class="flag">● {{ u.contested }}</span></span>
     </div>
     <p class="meta">{{ u.meta }}</p>
+    <p class="meta">{{ u.lastUpdated }}: <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: u.dateFormat }}</time></p>
     <nav class="toc" aria-label="Sections">
       {%- for sec in site.data.sections %}
       <a href="#{{ sec.id }}">{{ sec[L].h }}</a>
