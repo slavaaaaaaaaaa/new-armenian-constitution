@@ -1,5 +1,19 @@
 {%- assign L = page.lang | default: "en" -%}
 {%- assign u = site.data.ui[L] -%}
+{%- assign st = site.data.status -%}
+{%- assign total = 0 -%}{%- assign hot = 0 -%}
+{%- assign n_new = 0 -%}{%- assign n_chg = 0 -%}{%- assign n_rem = 0 -%}{%- assign n_kept = 0 -%}
+{%- for sec in site.data.sections -%}{%- for it in sec.items -%}
+  {%- assign total = total | plus: 1 -%}
+  {%- if it.hot -%}{%- assign hot = hot | plus: 1 -%}{%- endif -%}
+  {%- case it.tag -%}
+  {%- when "new" -%}{%- assign n_new = n_new | plus: 1 -%}
+  {%- when "chg" -%}{%- assign n_chg = n_chg | plus: 1 -%}
+  {%- when "rem" -%}{%- assign n_rem = n_rem | plus: 1 -%}
+  {%- when "kept" -%}{%- assign n_kept = n_kept | plus: 1 -%}
+  {%- endcase -%}
+{%- endfor -%}{%- endfor -%}
+{%- assign counts = "" | split: "" | push: n_new | push: n_chg | push: n_rem | push: n_kept -%}
 <!doctype html>
 <html lang="{{ L }}">
 <head>
@@ -15,83 +29,169 @@
   <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
   <link rel="alternate" hreflang="ru" href="{{ '/ru/' | absolute_url }}">
   <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+  <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Armenian:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Noto+Sans+Armenian:wght@500;600&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <p class="about">{{ u.about }}</p>
-    <div class="topline">
-      <span class="eyebrow">{{ u.eyebrow }}</span>
+<div class="flagbar" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <div class="crumbs">
+      <a class="home" href="{{ site.url }}/">{{ site.url | remove: "https://" }}</a>
+      <span aria-hidden="true">/</span>
+      <span class="here">{{ u.crumb }}</span>
+    </div>
+    <div class="bar-tools">
+      <button type="button" class="theme" aria-label="{{ u.darkMode }}" aria-pressed="false" hidden>
+        <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.1-17.1 1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></svg>
+        <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+      </button>
       <nav class="lang" aria-label="Language">
-        <a href="{{ '/' | relative_url }}" hreflang="en" lang="en"{% if L == "en" %} aria-current="page"{% endif %}>English</a>
-        <a href="{{ '/ru/' | relative_url }}" hreflang="ru" lang="ru"{% if L == "ru" %} aria-current="page"{% endif %}>Русский</a>
+        <a href="{{ '/' | relative_url }}" hreflang="en" lang="en" title="English"{% if L == "en" %} aria-current="page"{% endif %}>EN</a>
+        <a href="{{ '/ru/' | relative_url }}" hreflang="ru" lang="ru" title="Русский"{% if L == "ru" %} aria-current="page"{% endif %}>RU</a>
       </nav>
     </div>
-    <h1><span>{{ u.title }}</span><span class="hy" lang="hy">Նոր Սահմանադրության նախագիծ</span></h1>
-    <p class="lede">{{ u.lede }}</p>
-    <div class="legend">
-      {%- for k in site.data.ui.chip_order %}
-      <span><span class="chip {{ k }}">{{ u.legend[k] }}</span></span>
-      {%- endfor %}
-      <span><span class="flag">● {{ u.contested }}</span></span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <div class="hero-meta">
+        <span class="draft">{{ u.draftPill }}</span>
+        <span>{{ u.dates }}</span>
+      </div>
+      <h1 id="hero-title">{{ u.title }}</h1>
+      <p class="hy-sub" lang="hy">Նոր Սահմանադրության նախագիծ</p>
+      <p class="about">{{ u.about }}</p>
+      <p class="lede">{{ u.lede }}</p>
     </div>
-    <p class="meta">{{ u.meta }}</p>
-    <p class="meta">{{ u.lastUpdated }}: <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: u.dateFormat }}</time></p>
-    <nav class="toc" aria-label="Sections">
+
+    <aside class="glance" aria-label="{{ u.glance }}">
+      <div class="glance-top">
+        <div><span class="big">{{ total }}</span> <span>{% include plural.html n=total forms=u.points lang=L %} {{ u.tracked }}</span></div>
+        <span class="pill-ink">{{ hot }} {% include plural.html n=hot forms=u.contestedN lang=L %}</span>
+      </div>
+      {%- capture bar_label -%}
+        {%- for k in site.data.ui.chip_order -%}{{ counts[forloop.index0] }} {{ u.legend[k] | downcase }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}
+      {%- endcapture %}
+      <div class="stack" role="img" aria-label="{{ bar_label }}">
+        {%- for k in site.data.ui.chip_order %}
+        <span class="{{ k }}" style="flex: {{ counts[forloop.index0] }}"></span>
+        {%- endfor %}
+      </div>
+      <ul class="tally">
+        {%- for k in site.data.ui.chip_order %}
+        <li><span class="sw {{ k }}" aria-hidden="true"></span>{{ u.legend[k] }} <strong>{{ counts[forloop.index0] }}</strong></li>
+        {%- endfor %}
+      </ul>
+    </aside>
+  </section>
+
+  <section class="stands" aria-labelledby="stands-title">
+    <h2 id="stands-title">{{ u.statusTitle }}</h2>
+    <ol class="steps">
+      {%- for s in st.steps %}
+      <li class="{{ s.state }}">
+        <span class="when">{{ s[L].when }}</span>
+        <span class="what">{{ s[L].what }}{% if s.url %} <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.src }} ↗</a>{% endif %}</span>
+      </li>
+      {%- endfor %}
+    </ol>
+
+    {%- assign seats = st.seats %}
+    <div class="seats">
+      <div class="seats-row">
+        <span><strong>{{ seats.held }}</strong> {{ seats[L].held }}</span>
+        <span class="gap"><strong>{{ seats.need | minus: seats.held }}</strong> {{ seats[L].missing }}</span>
+        <span class="muted">{{ seats.total }} {{ seats[L].total }}</span>
+      </div>
+      <div class="seatbar" role="img" aria-label="{{ u.seatsLabel }}">
+        <span class="held" style="width: {{ seats.held | times: 100.0 | divided_by: seats.total | round: 2 }}%"></span>
+        <span class="short" style="width: {{ seats.need | minus: seats.held | times: 100.0 | divided_by: seats.total | round: 2 }}%"></span>
+        <span class="mark" style="left: {{ seats.need | times: 100.0 | divided_by: seats.total | round: 2 }}%"></span>
+      </div>
+      <p class="muted">{{ seats[L].note }} <a href="{{ seats[L].url }}" target="_blank" rel="noopener">{{ seats[L].src }} ↗</a></p>
+    </div>
+
+    <div class="notes">
+      {%- for x in st.notes[L] %}
+      <p>{{ x.t }} <a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.src }} ↗</a></p>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <div class="browse">
+    <nav class="toc" aria-label="{{ u.sections }}">
+      <span class="label">{{ u.sections }}</span>
       {%- for sec in site.data.sections %}
-      <a href="#{{ sec.id }}">{{ sec[L].h }}</a>
+      <a href="#{{ sec.id }}"><span>{{ sec[L].h }}</span><span class="n">{{ sec.items.size }}</span></a>
       {%- endfor %}
     </nav>
-  </header>
 
-  <main>
-    {%- for sec in site.data.sections %}
-    <section id="{{ sec.id }}">
-      <h2>{{ sec[L].h }}</h2>
-      <p class="sub">{{ sec[L].s }}</p>
-      <ol class="items">
+    <div class="content">
+      <div class="filters" role="group" aria-label="{{ u.filterLabel }}" hidden
+           data-lang="{{ L }}" data-forms="{{ u.points | jsonify | escape }}">
+        <button type="button" data-tag="all" aria-pressed="true"><span>{{ u.all }}</span><span class="n">{{ total }}</span></button>
+        {%- for k in site.data.ui.chip_order %}
+        <button type="button" data-tag="{{ k }}" aria-pressed="false"><span>{{ u.legend[k] }}</span><span class="n">{{ counts[forloop.index0] }}</span></button>
+        {%- endfor %}
+        <span class="sep" aria-hidden="true"></span>
+        <button type="button" class="hot-only" aria-pressed="false">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+          <span>{{ u.contestedOnly }}</span>
+        </button>
+      </div>
+
+      <p class="empty" hidden>{{ u.noMatch }}</p>
+
+      {%- for sec in site.data.sections %}
+      <section id="{{ sec.id }}" aria-labelledby="h-{{ sec.id }}">
+        <div class="sec-head">
+          <span class="num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+          <h2 id="h-{{ sec.id }}">{{ sec[L].h }}</h2>
+          <span class="count">{{ sec.items.size }} {% include plural.html n=sec.items.size forms=u.points lang=L %}</span>
+        </div>
+        <p class="sub">{{ sec[L].s }}</p>
         {%- for it in sec.items %}
-        <li>
-          <span class="chip {{ it.tag }}">{{ u.legend[it.tag] }}</span>
+        <article class="item{% if it.hot %} hot{% endif %}" data-tag="{{ it.tag }}">
+          <div class="tags">
+            <span class="chip {{ it.tag }}">{{ u.legend[it.tag] }}</span>
+            {%- if it.hot %}
+            <span class="chip hot">{{ u.contested }}</span>
+            {%- endif %}
+          </div>
           <div class="body">
             <h3>{{ it[L].h }}</h3>
-            {%- if it.hot %}
-            <span class="flag">● {{ u.contested }}</span>
-            {%- endif %}
             <p>{{ it[L].p }}</p>
             {%- if it.quote %}
             <blockquote class="hy" lang="hy">{{ it.quote.hy }}<span class="tr" lang="{{ L }}">{{ it.quote[L] }}</span></blockquote>
             {%- endif %}
-            <div class="refs">
-              {%- for r in it.refs %}
-              {% include ref.html ref=r u=u lang=L %}
-              {%- endfor %}
-            </div>
           </div>
-        </li>
+          <div class="refs">
+            {%- for r in it.refs %}
+            {% include ref.html ref=r u=u lang=L %}
+            {%- endfor %}
+          </div>
+        </article>
         {%- endfor %}
-      </ol>
-    </section>
-    {%- endfor %}
-  </main>
-
-  <aside class="status">
-    <h2>{{ u.statusTitle }}</h2>
-    <ul>
-      {%- for x in site.data.status[L] %}
-      <li>{{ x.t }} <a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.src }} ↗</a></li>
+      </section>
       {%- endfor %}
-    </ul>
-  </aside>
+    </div>
+  </div>
 
   <footer>
-    <p>{{ u.footer1 }}</p>
-    <p>{{ u.footer2 }}</p>
+    <div>
+      <p>{{ u.footer1 }} {{ u.footer2 }}</p>
+      <p>{{ u.meta }} {{ u.lastUpdated }}: <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: u.dateFormat }}</time>.</p>
+    </div>
+    <a href="{{ site.proposed_article_url }}1" target="_blank" rel="noopener">{{ u.readDraft }} ↗</a>
   </footer>
-</div>
+</main>
 </body>
 </html>

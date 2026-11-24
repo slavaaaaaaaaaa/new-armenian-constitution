@@ -1,32 +1,52 @@
-en:
-- t: The draft is open for public discussion on the government's site, which has not yet published an end date.
+# "Where it stands" panel: the path to a referendum, the seat math, and notes.
+# step state: done | now | next
+steps:
+- state: done
+  en: { when: Done · 23 Nov 2026, what: Draft published }
+  ru: { when: Готово · 23.11.2026, what: Проект опубликован }
+- state: now
   url: https://yourconstitution.am/hy
   src: yourconstitution.am
-- t: Both opposition factions refuse to provide the six extra votes Civil Contract needs to send the draft to a referendum.
-  url: https://meduza.io/en/news/2026/11/23/armenia-unveils-draft-constitution-removing-reference-to-nagorno-karabakh-reunification-in-concession-to-azerbaijan
-  src: Meduza
-- t: Civil Contract holds 64 of 105 seats; a referendum needs at least 70.
-  url: https://meduza.io/en/news/2026/11/23/armenia-unveils-draft-constitution-removing-reference-to-nagorno-karabakh-reunification-in-concession-to-azerbaijan
-  src: Meduza
-- t: The ruling party says the choice is a referendum or snap elections.
-  url: https://armenpress.am/en/article/1266364
-  src: Armenpress
-- t: Pashinyan pledges to resign if voters reject it, and not to run again if they approve it.
-  url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
-  src: AP
-ru:
-- t: Проект вынесен на общественное обсуждение на правительственном сайте; дата его окончания пока не объявлена.
-  url: https://yourconstitution.am/hy
-  src: yourconstitution.am
-- t: Обе оппозиционные фракции отказываются дать «Гражданскому договору» шесть недостающих голосов для вынесения проекта на референдум.
-  url: https://meduza.io/news/2026/11/23/pashinyan-opublikoval-proekt-novoy-konstitutsii-armenii-po-trebovaniyu-azerbaydzhana-iz-nee-isklyuchili-otsylku-k-vossoedineniyu-s-nagornym-karabahom
-  src: Медуза
-- t: У «Гражданского договора» 64 места из 105; для референдума нужно не меньше 70.
-  url: https://meduza.io/news/2026/11/23/pashinyan-opublikoval-proekt-novoy-konstitutsii-armenii-po-trebovaniyu-azerbaydzhana-iz-nee-isklyuchili-otsylku-k-vossoedineniyu-s-nagornym-karabahom
-  src: Медуза
-- t: Правящая партия говорит, что выбор между референдумом и досрочными выборами.
-  url: https://armenpress.am/en/article/1266364
-  src: Арменпресс
-- t: Пашинян обещает уйти в отставку, если проект отвергнут, и не баллотироваться снова, если его примут.
-  url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
-  src: AP
+  en: { when: Now · no end date announced, what: Public discussion }
+  ru: { when: Сейчас · дата окончания не объявлена, what: Общественное обсуждение }
+- state: next
+  en: { when: Next · needs 70 of 105 MPs, what: Parliament sends it to a referendum }
+  ru: { when: Далее · нужно 70 из 105 депутатов, what: Парламент выносит проект на референдум }
+- state: next
+  en: { when: Then · or snap elections, what: Referendum }
+  ru: { when: Затем · или досрочные выборы, what: Референдум }
+
+seats:
+  held: 64
+  need: 70
+  total: 105
+  en:
+    held: Civil Contract seats
+    missing: missing to reach 70
+    total: seats total
+    note: Both opposition factions refuse to provide the other six.
+    src: Meduza
+    url: https://meduza.io/en/news/2026/11/23/armenia-unveils-draft-constitution-removing-reference-to-nagorno-karabakh-reunification-in-concession-to-azerbaijan
+  ru:
+    held: мест у «Гражданского договора»
+    missing: не хватает до 70
+    total: мест всего
+    note: Обе оппозиционные фракции отказываются дать недостающие шесть голосов.
+    src: Медуза
+    url: https://meduza.io/news/2026/11/23/pashinyan-opublikoval-proekt-novoy-konstitutsii-armenii-po-trebovaniyu-azerbaydzhana-iz-nee-isklyuchili-otsylku-k-vossoedineniyu-s-nagornym-karabahom
+
+notes:
+  en:
+  - t: The ruling party says the choice is a referendum or snap elections.
+    url: https://armenpress.am/en/article/1266364
+    src: Armenpress
+  - t: Pashinyan pledges to resign if voters reject it, and not to run again if they approve it.
+    url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
+    src: AP
+  ru:
+  - t: Правящая партия говорит, что выбор между референдумом и досрочными выборами.
+    url: https://armenpress.am/en/article/1266364
+    src: Арменпресс
+  - t: Пашинян обещает уйти в отставку, если проект отвергнут, и не баллотироваться снова, если его примут.
+    url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
+    src: AP

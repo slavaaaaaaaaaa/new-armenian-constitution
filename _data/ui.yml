@@ -1,8 +1,22 @@
 en:
+  crumb: Armenia
+  draftPill: Draft · not in force
+  dates: Published 23 Nov 2026 · checked 24 Nov 2026
+  glance: At a glance
+  tracked: tracked
+  points: { one: point, other: points }
+  contestedN: { one: contested, other: contested }
+  sections: Sections
+  filterLabel: Filter points
+  all: All
+  contestedOnly: Contested only
+  noMatch: No points match this filter.
+  darkMode: Dark mode
+  readDraft: Read the official draft
+  seatsLabel: 'Vote math: the ruling party holds 64 seats, 70 are needed, out of 105'
   about: This site sums up, in plain English, what Armenia's proposed new constitution would change compared with the one in force today. It is meant for anyone who wants to understand the draft without reading all of it in Armenian, and every point links to the official text so you can check it yourself.
   lastUpdated: Last updated
   dateFormat: '%-d %b %Y'
-  eyebrow: Armenia · published 23 Nov 2026 · draft, not in force
   title: 'Armenia''s draft constitution: what changes'
   lede: Each point links to the draft article it describes. Where a point compares the draft with today's rules, it also links to the current article or to a news report. The government's site shows about ten articles per page, so look for the article number and part named in the link.
   meta: Text read from <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> on 24 Nov 2026. Every point is checked against the current constitution and links to the matching current article.
@@ -23,10 +37,24 @@ en:
   footer1: Article numbers refer to the draft unless marked as the current constitution. Translations of quoted Armenian text are my own.
   footer2: Compiled for personal reference; not legal advice.
 ru:
+  crumb: Армения
+  draftPill: Проект · не вступил в силу
+  dates: Опубликован 23.11.2026 · сверен 24.11.2026
+  glance: Коротко
+  tracked: в обзоре
+  points: { one: пункт, few: пункта, many: пунктов, other: пункта }
+  contestedN: { one: спорный, few: спорных, many: спорных, other: спорного }
+  sections: Разделы
+  filterLabel: Фильтр пунктов
+  all: Все
+  contestedOnly: Только спорные
+  noMatch: Нет пунктов, подходящих под фильтр.
+  darkMode: Тёмная тема
+  readDraft: Читать официальный проект
+  seatsLabel: 'Голоса: у правящей партии 64 места, нужно 70 из 105'
   about: Этот сайт простым языком рассказывает, что изменит предложенная новая конституция Армении по сравнению с действующей. Он для тех, кто хочет разобраться в проекте, не читая его целиком на армянском; каждый пункт ссылается на официальный текст, чтобы его можно было проверить.
   lastUpdated: Последнее обновление
   dateFormat: '%d.%m.%Y'
-  eyebrow: Армения · опубликован 23.11.2026 · проект, не вступил в силу
   title: 'Проект новой конституции Армении: что меняется'
   lede: Каждый пункт ссылается на статью проекта, о которой идёт речь. Если пункт сравнивает проект с нынешними правилами, есть и ссылка на действующую статью или на публикацию в СМИ. Правительственный сайт показывает около десяти статей на странице, поэтому ищите номер статьи и части, указанный в ссылке.
   meta: Текст прочитан на <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> 24.11.2026. Каждый пункт сверен с действующей конституцией и ссылается на соответствующую действующую статью.
