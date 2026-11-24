@@ -1,0 +1,43 @@
+en:
+  eyebrow: Armenia · published 23 Nov 2026 · draft, not in force
+  title: 'Armenia''s draft constitution: what changes'
+  lede: Every point below is checked against the official draft text (89 articles). The citation under each point opens the exact article on the government's site; the article number and part tell you where to look on that page.
+  meta: Text read from <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> on 24 Nov 2026. Comparisons to the current constitution are limited to points checked against its text or reported by several outlets.
+  legend:
+    new: New
+    chg: Changed
+    rem: Removed
+    kept: Kept
+    none: In the draft
+  contested: Contested
+  art: Art.
+  part: part
+  pt: pt.
+  preamble: Preamble
+  currentArt: Current constitution, Art.
+  explainer: Government explainer
+  statusTitle: Where it stands
+  footer1: Article numbers refer to the draft unless marked as the current constitution. Translations of quoted Armenian text are my own.
+  footer2: Compiled for personal reference; not legal advice.
+ru:
+  eyebrow: Армения · опубликован 23.11.2026 · проект, не вступил в силу
+  title: 'Проект новой конституции Армении: что меняется'
+  lede: Каждый пункт сверен с официальным текстом проекта (89 статей). Ссылка под пунктом открывает нужную статью на правительственном сайте; номер статьи и части показывает, где искать на странице.
+  meta: Текст прочитан на <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> 24.11.2026. Сравнения с действующей конституцией даны только там, где они сверены с её текстом или подтверждены несколькими изданиями.
+  legend:
+    new: Новое
+    chg: Изменено
+    rem: Убрано
+    kept: Сохранено
+    none: В проекте
+  contested: Спорный пункт
+  art: Ст.
+  part: ч.
+  pt: п.
+  preamble: Преамбула
+  currentArt: Действующая конституция, ст.
+  explainer: Пояснение правительства
+  statusTitle: Что дальше
+  footer1: Номера статей относятся к проекту, если не указано, что это действующая конституция. Переводы армянских цитат мои.
+  footer2: Составлено для личного использования; не юридическая консультация.
+chip_order: [new, chg, rem, kept, none]

@@ -1,0 +1,95 @@
+{%- assign L = page.lang | default: "en" -%}
+{%- assign u = site.data.ui[L] -%}
+<!doctype html>
+<html lang="{{ L }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>{{ u.title }}</title>
+  <meta name="description" content="{{ u.lede | escape }}">
+  <meta property="og:title" content="{{ u.title | escape }}">
+  <meta property="og:description" content="{{ u.lede | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="ru" href="{{ '/ru/' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Armenian:wght@400;600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="topline">
+      <span class="eyebrow">{{ u.eyebrow }}</span>
+      <nav class="lang" aria-label="Language">
+        <a href="{{ '/' | relative_url }}" hreflang="en" lang="en"{% if L == "en" %} aria-current="page"{% endif %}>English</a>
+        <a href="{{ '/ru/' | relative_url }}" hreflang="ru" lang="ru"{% if L == "ru" %} aria-current="page"{% endif %}>Русский</a>
+      </nav>
+    </div>
+    <h1><span>{{ u.title }}</span><span class="hy" lang="hy">Նոր Սահմանադրության նախագիծ</span></h1>
+    <p class="lede">{{ u.lede }}</p>
+    <div class="legend">
+      {%- for k in site.data.ui.chip_order %}
+      <span><span class="chip {{ k }}">{{ u.legend[k] }}</span></span>
+      {%- endfor %}
+      <span><span class="flag">● {{ u.contested }}</span></span>
+    </div>
+    <p class="meta">{{ u.meta }}</p>
+    <nav class="toc" aria-label="Sections">
+      {%- for sec in site.data.sections %}
+      <a href="#{{ sec.id }}">{{ sec[L].h }}</a>
+      {%- endfor %}
+    </nav>
+  </header>
+
+  <main>
+    {%- for sec in site.data.sections %}
+    <section id="{{ sec.id }}">
+      <h2>{{ sec[L].h }}</h2>
+      <p class="sub">{{ sec[L].s }}</p>
+      <ol class="items">
+        {%- for it in sec.items %}
+        <li>
+          <span class="chip {{ it.tag }}">{{ u.legend[it.tag] }}</span>
+          <div class="body">
+            <h3>{{ it[L].h }}</h3>
+            {%- if it.hot %}
+            <span class="flag">● {{ u.contested }}</span>
+            {%- endif %}
+            <p>{{ it[L].p }}</p>
+            {%- if it.quote %}
+            <blockquote class="hy" lang="hy">{{ it.quote.hy }}<span class="tr" lang="{{ L }}">{{ it.quote[L] }}</span></blockquote>
+            {%- endif %}
+            <div class="refs">
+              {%- for r in it.refs %}
+              {% include ref.html ref=r u=u lang=L %}
+              {%- endfor %}
+            </div>
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+    </section>
+    {%- endfor %}
+  </main>
+
+  <aside class="status">
+    <h2>{{ u.statusTitle }}</h2>
+    <ul>
+      {%- for x in site.data.status[L] %}
+      <li>{{ x.t }} <a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.src }} ↗</a></li>
+      {%- endfor %}
+    </ul>
+  </aside>
+
+  <footer>
+    <p>{{ u.footer1 }}</p>
+    <p>{{ u.footer2 }}</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+title: Armenia Draft Constitution
+description: A plain-language guide to what Armenia's 2026 draft constitution changes, with a citation to the official article for every point.
+url: https://slavaaaaaaaaaa.github.io
+baseurl: /new-armenian-constitution
+
+# Article links on the official site; templates append the article number.
+proposed_article_url: https://yourconstitution.am/hy/constitution/proposed/article/
+current_article_url: https://yourconstitution.am/hy/constitution/current/article/
+explainer_url: https://yourconstitution.am/hy/changes
+
+languages: [en, ru]
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
