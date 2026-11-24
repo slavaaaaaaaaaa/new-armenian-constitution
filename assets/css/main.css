@@ -89,7 +89,6 @@ ol.items li {
 .chip.chg { color: var(--chg); background: var(--chg-bg); }
 .chip.rem { color: var(--rem); background: var(--rem-bg); }
 .chip.kept { color: var(--kept); background: var(--kept-bg); }
-.chip.none { color: var(--muted); background: transparent; border: 1px solid var(--line); }
 .body { min-width: 0; display: grid; gap: 0.4rem; }
 .body h3 { font: 600 1rem/1.35 var(--font-body); margin: 0; }
 .body p { margin: 0; max-width: 66ch; }

@@ -3,6 +3,9 @@
 {%- if r.pre -%}
   {%- assign url = site.proposed_article_url | append: "1" -%}
   {%- assign label = u.preamble -%}
+{%- elsif r.curpre -%}
+  {%- assign url = site.current_article_url | append: "1" -%}
+  {%- assign label = u.currentPreamble -%}
 {%- elsif r.explainer -%}
   {%- assign url = site.explainer_url -%}
   {%- assign label = u.explainer -%}
@@ -20,4 +23,4 @@
   {%- if r.p %}{% capture label %}{{ label }}, {{ u.part }} {{ r.p }}{% endcapture %}{% endif -%}
   {%- if r.pt %}{% capture label %}{{ label }}, {{ u.pt }} {{ r.pt }}{% endcapture %}{% endif -%}
 {%- endif -%}
-<a href="{{ url }}" target="_blank" rel="noopener"{% if r.ctx or r.explainer or r.cur %} class="ctx"{% endif %}>{{ label }} ↗</a>
+<a href="{{ url }}" target="_blank" rel="noopener"{% if r.ctx or r.explainer or r.cur or r.curpre %} class="ctx"{% endif %}>{{ label }} ↗</a>

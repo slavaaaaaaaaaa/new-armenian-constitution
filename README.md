@@ -11,7 +11,7 @@ Live site: https://slava.lol/new-armenian-constitution/
 All content lives in `_data/`:
 
 - `sections.yml`: the provisions, grouped by section. Each item has a `tag`
-  (`new`, `chg`, `rem`, `kept`, `none`), optional `hot: true` for contested
+  (`new`, `chg`, `rem`, `kept`), optional `hot: true` for contested
   points, `en`/`ru` text, an optional Armenian `quote`, and `refs`.
 - `ui.yml`: interface strings for each language.
 - `status.yml`: the "Where it stands" list.
@@ -23,6 +23,7 @@ A ref is one of:
 | `a`, optional `p`, `pt`    | draft article `a`, part `p`, point `pt` |
 | `cur`, optional `p`        | current constitution article `cur`     |
 | `pre: true`                | draft preamble                         |
+| `curpre: true`             | current constitution preamble          |
 | `explainer: true`          | government explainer page              |
 | `ctx: true`, `label`, `url`| any outside source                     |
 

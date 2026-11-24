@@ -2,19 +2,19 @@ en:
   eyebrow: Armenia · published 23 Nov 2026 · draft, not in force
   title: 'Armenia''s draft constitution: what changes'
   lede: Each point links to the draft article it describes. Where a point compares the draft with today's rules, it also links to the current article or to a news report. The government's site shows about ten articles per page, so look for the article number and part named in the link.
-  meta: Text read from <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> on 24 Nov 2026. "In the draft" marks provisions whose current-constitution equivalent was not checked.
+  meta: Text read from <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> on 24 Nov 2026. Every point is checked against the current constitution and links to the matching current article.
   legend:
     new: New
     chg: Changed
     rem: Removed
     kept: Kept
-    none: In the draft
   contested: Contested
   art: Art.
   part: part
   pt: pt.
   preamble: Preamble
   currentArt: Current constitution, Art.
+  currentPreamble: Current constitution, Preamble
   explainer: Government explainer
   statusTitle: Where it stands
   footer1: Article numbers refer to the draft unless marked as the current constitution. Translations of quoted Armenian text are my own.
@@ -23,21 +23,21 @@ ru:
   eyebrow: Армения · опубликован 23.11.2026 · проект, не вступил в силу
   title: 'Проект новой конституции Армении: что меняется'
   lede: Каждый пункт ссылается на статью проекта, о которой идёт речь. Если пункт сравнивает проект с нынешними правилами, есть и ссылка на действующую статью или на публикацию в СМИ. Правительственный сайт показывает около десяти статей на странице, поэтому ищите номер статьи и части, указанный в ссылке.
-  meta: Текст прочитан на <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> 24.11.2026. Пометка «В проекте» означает, что аналог в действующей конституции не сверялся.
+  meta: Текст прочитан на <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> 24.11.2026. Каждый пункт сверен с действующей конституцией и ссылается на соответствующую действующую статью.
   legend:
     new: Новое
     chg: Изменено
     rem: Убрано
     kept: Сохранено
-    none: В проекте
   contested: Спорный пункт
   art: Ст.
   part: ч.
   pt: п.
   preamble: Преамбула
   currentArt: Действующая конституция, ст.
+  currentPreamble: Действующая конституция, преамбула
   explainer: Пояснение правительства
   statusTitle: Что дальше
   footer1: Номера статей относятся к проекту, если не указано, что это действующая конституция. Переводы армянских цитат мои.
   footer2: Составлено для личного использования; не юридическая консультация.
-chip_order: [new, chg, rem, kept, none]
+chip_order: [new, chg, rem, kept]
