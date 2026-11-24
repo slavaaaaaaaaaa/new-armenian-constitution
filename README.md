@@ -4,7 +4,7 @@ A plain-language, English/Russian guide to the draft constitution of Armenia
 published on 23 Nov 2026. Each point links to the exact article on
 [yourconstitution.am](https://yourconstitution.am/hy/constitution/proposed/article/1).
 
-Live site: https://slavaaaaaaaaaa.github.io/new-armenian-constitution/
+Live site: https://slava.lol/new-armenian-constitution/
 
 ## Editing content
 
@@ -39,5 +39,5 @@ Then open http://localhost:4000/new-armenian-constitution/.
 
 ## Publishing
 
-In the repository's GitHub settings, under **Pages**, set the source to
-"Deploy from a branch", branch `main`, folder `/ (root)`.
+`.github/workflows/jekyll.yml` builds and deploys the site on every push to
+`main`. The repository's Pages source must be set to **GitHub Actions**.
