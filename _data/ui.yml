@@ -1,8 +1,8 @@
 en:
   eyebrow: Armenia · published 23 Nov 2026 · draft, not in force
   title: 'Armenia''s draft constitution: what changes'
-  lede: Every point below is checked against the official draft text (89 articles). The citation under each point opens the exact article on the government's site; the article number and part tell you where to look on that page.
-  meta: Text read from <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> on 24 Nov 2026. Comparisons to the current constitution are limited to points checked against its text or reported by several outlets.
+  lede: Each point links to the draft article it describes. Where a point compares the draft with today's rules, it also links to the current article or to a news report. The government's site shows about ten articles per page, so look for the article number and part named in the link.
+  meta: Text read from <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> on 24 Nov 2026. "In the draft" marks provisions whose current-constitution equivalent was not checked.
   legend:
     new: New
     chg: Changed
@@ -22,8 +22,8 @@ en:
 ru:
   eyebrow: Армения · опубликован 23.11.2026 · проект, не вступил в силу
   title: 'Проект новой конституции Армении: что меняется'
-  lede: Каждый пункт сверен с официальным текстом проекта (89 статей). Ссылка под пунктом открывает нужную статью на правительственном сайте; номер статьи и части показывает, где искать на странице.
-  meta: Текст прочитан на <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> 24.11.2026. Сравнения с действующей конституцией даны только там, где они сверены с её текстом или подтверждены несколькими изданиями.
+  lede: Каждый пункт ссылается на статью проекта, о которой идёт речь. Если пункт сравнивает проект с нынешними правилами, есть и ссылка на действующую статью или на публикацию в СМИ. Правительственный сайт показывает около десяти статей на странице, поэтому ищите номер статьи и части, указанный в ссылке.
+  meta: Текст прочитан на <a href="https://yourconstitution.am/hy/constitution/proposed/article/1" target="_blank" rel="noopener">yourconstitution.am</a> 24.11.2026. Пометка «В проекте» означает, что аналог в действующей конституции не сверялся.
   legend:
     new: Новое
     chg: Изменено

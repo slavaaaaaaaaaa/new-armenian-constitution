@@ -31,6 +31,12 @@
     refs:
     - a: 2
       p: 1
+    - cur: 1
+    - ctx: true
+      label:
+        en: Asbarez
+        ru: Asbarez
+      url: https://asbarez.com/new-draft-constitution-publicized/
   - tag: chg
     en:
       h: State and Church relations must be set by law
@@ -41,28 +47,38 @@
     refs:
     - a: 15
       p: 2
-  - tag: new
+    - cur: 18
+    - ctx: true
+      label:
+        en: Asbarez
+        ru: Asbarez
+      url: https://asbarez.com/new-draft-constitution-publicized/
+  - tag: chg
     en:
-      h: Changing the flag, coat of arms or anthem needs a referendum
-      p: The law that describes the state symbols is adopted by referendum.
+      h: Flag and coat of arms move out of the constitution into a law
+      p: The current constitution describes the flag and coat of arms in its own text (Mount Ararat with Noah's Ark on the shield). The draft only names the symbols and leaves their description, and the anthem, to a law that must be adopted by referendum. Changing them already needed a referendum, so the change is where the description lives, not the referendum rule.
     ru:
-      h: Флаг, герб и гимн меняются только референдумом
-      p: Закон с описанием государственных символов принимается на референдуме.
+      h: Флаг и герб переносятся из конституции в закон
+      p: Действующая конституция описывает флаг и герб прямо в своём тексте (гора Арарат с Ноевым ковчегом на щите). Проект только называет символы, а их описание и гимн оставляет закону, который принимается на референдуме. Менять их и раньше можно было только референдумом, так что меняется место, где закреплено описание, а не правило о референдуме.
     refs:
     - a: 16
       p: 1
     - a: 84
       p: 2
+    - cur: 21
+    - cur: 202
   - tag: chg
     en:
-      h: Constitution changes only through a referendum
-      p: Any amendment goes to a popular vote. A constitution or amendment passes if more than half of participants vote yes and that is at least one third of all eligible voters.
+      h: Constitution changes only through a referendum, with a higher bar
+      p: Today parliament can amend some chapters by a two-thirds vote; only certain chapters require a referendum. The draft provides no parliamentary route. A constitution or amendment passes if more than half of participants vote yes and that is at least one third of all eligible voters. The current threshold is one quarter.
     ru:
-      h: Конституция меняется только через референдум
-      p: Любая поправка выносится на всенародное голосование. Конституция или поправка принимается, если «за» больше половины участников и не меньше трети всех имеющих право голоса.
+      h: Конституция меняется только референдумом, и порог выше
+      p: Сейчас парламент может менять часть глав двумя третями голосов; референдум обязателен только для отдельных глав. В проекте парламентского пути нет. Конституция или поправка принимается, если «за» больше половины участников и не меньше трети всех имеющих право голоса. Сейчас порог составляет одну четверть.
     refs:
     - a: 82
       p: 2
+    - cur: 202
+    - cur: 207
     - explainer: true
 - id: citizens
   en:
@@ -76,10 +92,10 @@
     hot: true
     en:
       h: Courts may strip citizenship
-      p: In cases set by law, a court may deprive a person of citizenship for crimes against the foundations of the constitutional order or state security. The current constitution forbids deprivation of citizenship outright. The draft names no safeguard against statelessness and does not limit this to dual citizens; the list of crimes is left to ordinary law.
+      p: In cases set by law, a court may deprive a person of citizenship for crimes against the foundations of the constitutional order or state security. The current constitution forbids deprivation of citizenship outright. The clause itself does not mention statelessness or limit this to dual citizens; which crimes qualify is left to ordinary law.
     ru:
       h: Суд сможет лишать гражданства
-      p: В предусмотренных законом случаях суд может лишить гражданства за преступления против основ конституционного строя или безопасности государства. Действующая конституция прямо запрещает лишение гражданства. Проект не содержит защиты от безгражданства и не ограничивает норму лицами с двойным гражданством; перечень преступлений оставлен обычному закону.
+      p: В предусмотренных законом случаях суд может лишить гражданства за преступления против основ конституционного строя или безопасности государства. Действующая конституция прямо запрещает лишение гражданства. Сама норма не упоминает безгражданство и не ограничивается лицами с двойным гражданством; какие именно преступления подпадают под неё, решит обычный закон.
     quote:
       hy: քաղաքացիությունից զրկելը՝ սահմանադրական կարգի հիմունքների կամ պետության անվտանգության դեմ ուղղված հանցագործությունների համար
       en: '"deprivation of citizenship for crimes directed against the foundations of the constitutional order or the security of the state"'
@@ -90,24 +106,30 @@
       pt: 5
     - cur: 47
       p: 5
+    - ctx: true
+      label:
+        en: Asbarez
+        ru: Asbarez
+      url: https://asbarez.com/new-draft-constitution-publicized/
   - tag: kept
     en:
       h: Simplified citizenship for ethnic Armenians stays
-      p: Ethnic Armenians still acquire citizenship through a simplified procedure set by law. An earlier leaked text had dropped this; the published draft keeps it.
+      p: Ethnic Armenians still acquire citizenship through a simplified procedure set by law, as in the current constitution.
     ru:
       h: Упрощённое гражданство для этнических армян сохранено
-      p: Этнические армяне по-прежнему получают гражданство в упрощённом порядке, установленном законом. В утёкшей ранее версии этой нормы не было; в опубликованном проекте она есть.
+      p: Этнические армяне по-прежнему получают гражданство в упрощённом порядке, установленном законом, как и по действующей конституции.
     refs:
     - a: 20
       p: 1
       pt: 14
+    - cur: 47
   - tag: kept
     en:
       h: Right to change citizenship and to enter Armenia protected
-      p: The draft still bans depriving a citizen of the right to change citizenship, and bans restricting a citizen's right to enter Armenia.
+      p: The draft still bans depriving a citizen of the right to change citizenship, as the current constitution does. It also bans restricting a citizen's right to enter Armenia.
     ru:
       h: Право сменить гражданство и въехать в Армению защищено
-      p: Проект по-прежнему запрещает лишать гражданина права сменить гражданство и запрещает ограничивать право гражданина на въезд в Армению.
+      p: Проект, как и действующая конституция, запрещает лишать гражданина права сменить гражданство. Он также запрещает ограничивать право гражданина на въезд в Армению.
     refs:
     - a: 23
       p: 1
@@ -115,19 +137,27 @@
     - a: 23
       p: 1
       pt: 9
+    - cur: 47
+      p: 5
   - tag: new
     hot: true
     en:
       h: Residency requirement to vote
-      p: Only citizens aged 18+ who lived in Armenia permanently for at least one of the two years before an election or referendum may vote. This mainly excludes the diaspora, including Armenians living in Russia.
+      p: Only citizens aged 18+ who lived in Armenia permanently for at least one of the two years before an election or referendum may vote. Today every citizen aged 18+ may vote. AP reports this limits the influence of the diaspora, including Armenians in Russia.
     ru:
       h: Ценз оседлости для голосования
-      p: Голосовать могут только граждане старше 18 лет, постоянно прожившие в Армении не меньше года из двух лет перед выборами или референдумом. Это в основном отсекает диаспору, в том числе армян в России.
+      p: Голосовать могут только граждане старше 18 лет, постоянно прожившие в Армении не меньше года из двух лет перед выборами или референдумом. Сейчас голосовать может любой гражданин старше 18 лет. По оценке AP, это ограничивает влияние диаспоры, в том числе армян в России.
     refs:
     - a: 20
       p: 1
       pt: 28
-  - tag: new
+    - cur: 48
+    - ctx: true
+      label:
+        en: AP
+        ru: AP
+      url: https://www.local10.com/news/world/2026/11/23/armenian-prime-minister-proposes-new-constitution-in-bid-for-peace-with-azerbaijan/
+  - tag: none
     en:
       h: Courts may remove the right to vote and run
       p: In cases set by law, courts may restrict voting and candidacy rights of people convicted of crimes against the constitutional order or state security, or of election crimes.
@@ -150,6 +180,7 @@
       p: 9
     - a: 24
       p: 10
+    - explainer: true
 - id: parties
   en:
     h: Parties and media
@@ -158,7 +189,7 @@
     h: Партии и СМИ
     s: Финансирование, запрет и внутренняя демократия.
   items:
-  - tag: new
+  - tag: none
     en:
       h: Parties funded only by citizens and the state
       p: Parties may receive money only as donations from citizens and, where the law provides, from the state budget.
@@ -168,29 +199,30 @@
     refs:
     - a: 27
       p: 5
-  - tag: new
+  - tag: none
     hot: true
     en:
       h: Foreign funding is grounds to ban a party
-      p: The Constitutional Court must ban a party that received foreign funding, alongside existing grounds such as calls for violent overthrow or inciting hatred.
+      p: 'A party is subject to a ban by the Constitutional Court if it received funding from a foreign source. The same part lists the other grounds: calls for violent overthrow, renouncing independence, national or religious hatred, violence, or undermining voters'' free will.'
     ru:
       h: Иностранное финансирование как основание для запрета партии
-      p: Конституционный суд запрещает партию, получившую финансирование из иностранного источника, наряду с прежними основаниями вроде призывов к насильственному свержению или разжигания ненависти.
+      p: 'Партия подлежит запрету решением Конституционного суда, если получила финансирование из иностранного источника. В той же части перечислены другие основания: призывы к насильственному свержению строя, отказ от независимости, национальная или религиозная ненависть, насилие, искажение свободного волеизъявления избирателей.'
     refs:
     - a: 24
       p: 12
   - tag: new
     en:
       h: Party leadership must be elected
-      p: Parties must use elections to form their governing bodies, and must operate with financial transparency. Media must too.
+      p: Parties must use elections to form their governing bodies, and must operate with financial transparency. Media must also be financially transparent.
     ru:
       h: Руководство партий должно избираться
-      p: Партии обязаны формировать руководящие органы через выборы и работать финансово прозрачно. То же требование прозрачности распространяется на СМИ.
+      p: Партии обязаны формировать руководящие органы через выборы и работать финансово прозрачно. Требование финансовой прозрачности распространяется и на СМИ.
     refs:
     - a: 27
       p: 3
     - a: 28
       p: 3
+    - explainer: true
 - id: power
   en:
     h: Parliament, president, government
@@ -202,13 +234,19 @@
   - tag: chg
     en:
       h: Prime minister is commander-in-chief at all times
-      p: The supreme commander of the armed forces is the prime minister, in peace and in war.
+      p: The draft names the prime minister supreme commander of the armed forces, with no limit to wartime. Under the current constitution the armed forces are subordinate to the government, and the prime minister is supreme commander only in war.
     ru:
       h: Премьер-министр всегда верховный главнокомандующий
-      p: Верховным главнокомандующим вооружёнными силами является премьер-министр, и в мирное, и в военное время.
+      p: Проект называет премьер-министра верховным главнокомандующим без ограничения военным временем. По действующей конституции вооружённые силы подчиняются правительству, а премьер является главнокомандующим только во время войны.
     refs:
     - a: 57
       p: 2
+    - cur: 155
+    - ctx: true
+      label:
+        en: nt.am
+        ru: nt.am
+      url: https://nt.am/en/news/363630/
   - tag: chg
     en:
       h: Hung parliament means a new election first
@@ -221,6 +259,7 @@
       p: 7
     - a: 30
       p: 8
+    - explainer: true
   - tag: none
     en:
       h: One third of seats guaranteed to the opposition
@@ -231,7 +270,7 @@
     refs:
     - a: 30
       p: 9
-  - tag: new
+  - tag: none
     en:
       h: No-confidence votes against individual ministers
       p: A single parliamentary faction can table a no-confidence motion against a deputy prime minister, minister or diplomatic representative, up to twice per session.
@@ -258,25 +297,31 @@
   - tag: none
     en:
       h: 'President: one 7-year term, elected by parliament'
-      p: The president is elected by the National Assembly for seven years with no re-election. This matches the current system.
+      p: The president is elected by the National Assembly for seven years with no re-election. Election by parliament and the seven-year term are the same as today.
     ru:
       h: 'Президент: один срок на 7 лет, избирается парламентом'
-      p: Президента избирает Национальное собрание на семь лет без права переизбрания. Это совпадает с нынешней системой.
+      p: Президента избирает Национальное собрание на семь лет без права переизбрания. Избрание парламентом и семилетний срок такие же, как сейчас.
     refs:
     - a: 49
       p: 1
-  - tag: none
+    - a: 49
+      p: 2
+    - cur: 124
+    - cur: 125
+  - tag: chg
     en:
       h: Single citizenship and residence for top posts
-      p: MPs (25+) and the president (35+) must have been citizens of Armenia only, and lived permanently in Armenia, for the past five years, and must speak Armenian.
+      p: MPs (25+) and the president (35+) must have been citizens of Armenia only, and lived permanently in Armenia, for the past five years, and must speak Armenian. Today MPs need four years and the president needs six years and must be 40+, so the bar rises for MPs and falls for the president.
     ru:
       h: Только одно гражданство и проживание для высших постов
-      p: Депутат (от 25 лет) и президент (от 35 лет) должны последние пять лет быть только гражданами Армении, постоянно жить в Армении и владеть армянским.
+      p: Депутат (от 25 лет) и президент (от 35 лет) должны последние пять лет быть только гражданами Армении, постоянно жить в Армении и владеть армянским. Сейчас депутату нужно четыре года, а президенту шесть лет и возраст от 40, то есть для депутатов требования ужесточаются, а для президента смягчаются.
     refs:
     - a: 35
       p: 1
     - a: 49
       p: 2
+    - cur: 48
+    - cur: 124
 - id: courts
   en:
     h: Courts, prosecutors, local government
@@ -289,15 +334,17 @@
     hot: true
     en:
       h: Every sitting judge is re-vetted
-      p: Within five years, all judges of ordinary courts are vetted once for integrity, conduct, conflicts of interest and whether assets match legal income. Until then they serve as "temporary acting judges." A five-member commission elected by parliament decides; its findings cannot be challenged in ordinary courts, only appealed to the Constitutional Court.
+      p: Within five years, all judges of ordinary courts are vetted once for integrity, conduct, conflicts of interest and whether assets match legal income. Until then they serve as "temporary acting judges." A five-member commission elected by parliament, on nominations from the president, the human rights commissioner and the government, decides. Its findings cannot be reviewed in court; a judge who is not reappointed may appeal to the Constitutional Court.
     ru:
       h: Все действующие судьи проходят переаттестацию
-      p: В течение пяти лет все судьи общих судов однократно проверяются на добросовестность, соблюдение этики, конфликт интересов и соответствие имущества законным доходам. До этого они работают как «временно исполняющие обязанности судьи». Решает комиссия из пяти человек, избираемая парламентом; её выводы нельзя обжаловать в обычном суде, только в Конституционном.
+      p: В течение пяти лет все судьи общих судов однократно проверяются на добросовестность, соблюдение этики, конфликт интересов и соответствие имущества законным доходам. До этого они работают как «временно исполняющие обязанности судьи». Решает комиссия из пяти человек, избираемая парламентом по представлению президента, уполномоченного по правам человека и правительства. Её выводы не подлежат судебному пересмотру; судья, которого не назначили, может обжаловать это в Конституционном суде.
     refs:
     - a: 85
       p: 1
     - a: 85
       p: 2
+    - a: 85
+      p: 7
     - a: 85
       p: 11
     - a: 85
@@ -305,51 +352,54 @@
   - tag: new
     en:
       h: Jury trials
-      p: Some cases may be heard with jurors; which ones and how is left to law.
+      p: In cases and in the manner set by law, cases are heard with jurors.
     ru:
       h: Суд присяжных
-      p: Некоторые дела могут рассматриваться с участием присяжных; какие и как, определит закон.
+      p: В случаях и порядке, установленных законом, дела рассматриваются с участием присяжных.
     refs:
+    - a: 59
     - explainer: true
   - tag: new
     en:
       h: Independent prosecution with a Prosecutorial Council
-      p: The prosecution service is defined as a single independent system led by the Prosecutor General. A new Prosecutorial Council is formed within six months of the next parliament.
+      p: The prosecution service is a single independent system led by the Prosecutor General, elected by at least three fifths of MPs. A new Prosecutorial Council, an independent body guarding prosecutors' independence, is formed within six months of the next parliament's first session.
     ru:
       h: Независимая прокуратура и Прокурорский совет
-      p: Прокуратура определяется как единая независимая система во главе с генпрокурором. Новый Прокурорский совет формируется в течение шести месяцев после созыва следующего парламента.
+      p: Прокуратура является единой независимой системой во главе с генпрокурором, которого избирают не менее трёх пятых депутатов. Новый Прокурорский совет, независимый орган, гарантирующий независимость прокуроров, формируется в течение шести месяцев после первой сессии следующего парламента.
     refs:
+    - a: 68
+    - a: 67
     - a: 86
       p: 1
-    - explainer: true
   - tag: none
     en:
-      h: City councils elected proportionally; councils pick mayors
-      p: Community councils are elected by party lists, and the council elects the head of the community.
+      h: Community councils elected proportionally; councils pick community heads
+      p: Community councils and heads serve five years. Councils are elected by a proportional system, and the community head is elected indirectly.
     ru:
       h: Советы избираются по спискам и выбирают глав общин
-      p: Советы общин избираются по партийным спискам, а глава общины избирается советом.
+      p: Советы и главы общин избираются на пять лет. Советы избираются по пропорциональной системе, глава общины избирается косвенно.
     refs:
+    - a: 72
     - explainer: true
 - id: foreigners
   en:
     h: Relevant to foreigners living in Armenia
-    s: Nothing in the draft changes residence permits. These are the points that touch non-citizens.
+    s: Residence permits are set by ordinary law, not the constitution. These are the draft provisions that touch non-citizens.
   ru:
     h: Что касается иностранцев в Армении
-    s: Проект не меняет правила ВНЖ. Вот пункты, которые затрагивают неграждан.
+    s: ВНЖ регулируются обычным законом, а не конституцией. Вот положения проекта, которые затрагивают неграждан.
   items:
-  - tag: kept
+  - tag: none
     en:
-      h: Foreigners still can't own land
+      h: Foreigners can't own land
       p: Foreign citizens and stateless persons do not have the right to own land, except in exceptional cases set by law.
     ru:
-      h: Иностранцы по-прежнему не могут владеть землёй
+      h: Иностранцы не могут владеть землёй
       p: Иностранные граждане и лица без гражданства не имеют права собственности на землю, кроме исключительных случаев, установленных законом.
     refs:
     - a: 24
       p: 15
-  - tag: new
+  - tag: none
     en:
       h: Land limits may extend to foreign-owned companies
       p: The law may restrict land ownership by legal entities with direct or indirect participation of foreigners or stateless persons. Relevant if you ever buy property through an Armenian company.
