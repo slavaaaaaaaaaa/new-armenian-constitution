@@ -103,7 +103,7 @@
       {%- for s in st.steps %}
       <li class="{{ s.state }}">
         <span class="when">{{ s[L].when }}</span>
-        <span class="what">{{ s[L].what }}{% if s.url %} <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.src }} ↗</a>{% endif %}</span>
+        <span class="what">{{ s[L].what }}{% for x in s.links %} <a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.src }} ↗</a>{% endfor %}</span>
       </li>
       {%- endfor %}
     </ol>
@@ -112,7 +112,8 @@
     <div class="seats">
       <div class="seats-row">
         <span><strong>{{ seats.held }}</strong> {{ seats[L].held }}</span>
-        <span class="gap"><strong>{{ seats.need | minus: seats.held }}</strong> {{ seats[L].missing }}</span>
+        {%- capture gap %}<strong>{{ seats.need | minus: seats.held }}</strong>{% endcapture %}
+        <span class="gap">{{ seats[L].missing | replace: "%n", gap }}</span>
         <span class="muted">{{ seats.total }} {{ seats[L].total }}</span>
       </div>
       <div class="seatbar" role="img" aria-label="{{ u.seatsLabel }}">
@@ -192,7 +193,7 @@
   <footer>
     <div>
       <p>{{ u.footer1 }} {{ u.footer2 }}</p>
-      <p>{{ u.meta }} {{ u.lastUpdated }}: <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: u.dateFormat }}</time>.</p>
+      <p>{{ u.meta }} {{ u.lastUpdated }} <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: u.dateFormat }}</time>{{ u.stop }}</p>
     </div>
     <a href="{{ site.proposed_article_url }}1" target="_blank" rel="noopener">{{ u.readDraft }} ↗</a>
   </footer>

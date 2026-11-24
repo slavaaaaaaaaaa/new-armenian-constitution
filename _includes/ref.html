@@ -21,6 +21,7 @@
     {%- capture label %}{{ u.art }} {{ r.a }}{% endcapture -%}
   {%- endif -%}
   {%- if r.p %}{% capture label %}{{ label }}, {{ u.part }} {{ r.p }}{% endcapture %}{% endif -%}
+  {%- if r.ps %}{% capture label %}{{ label }}, {{ u.parts }} {{ r.ps }}{% endcapture %}{% endif -%}
   {%- if r.pt %}{% capture label %}{{ label }}, {{ u.pt }} {{ r.pt }}{% endcapture %}{% endif -%}
 {%- endif -%}
 <a href="{{ url }}" target="_blank" rel="noopener"{% if r.ctx or r.explainer or r.cur or r.curpre %} class="ctx"{% endif %}>{{ label }} ↗</a>

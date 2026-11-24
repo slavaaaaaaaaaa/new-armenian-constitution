@@ -6,11 +6,14 @@ steps:
   ru: { when: Готово · 23.11.2026, what: Проект опубликован }
   hy: { when: Արված է · 23.11.2026, what: Նախագիծը հրապարակվել է }
 - state: now
-  url: https://yourconstitution.am/hy
-  src: yourconstitution.am
-  en: { when: Now · no end date announced, what: Public discussion }
-  ru: { when: Сейчас · дата окончания не объявлена, what: Общественное обсуждение }
-  hy: { when: Հիմա · ավարտի ամսաթիվը հայտարարված չէ, what: Հանրային քննարկում }
+  links:
+  - url: https://yourconstitution.am/hy
+    src: yourconstitution.am
+  - url: https://www.kiprinform.com/en/news/pashinyan-presents-draft-of-new-armenian-constitution-dropping-declaration-of-independence-from-preamble/
+    src: Kiprinform
+  en: { when: 'Now · until spring, per Civil Contract', what: Public discussion }
+  ru: { when: 'Сейчас · до весны, по словам «Гражданского договора»', what: Общественное обсуждение }
+  hy: { when: Հիմա · մինչև գարուն՝ ըստ «Քաղաքացիական պայմանագրի», what: Հանրային քննարկում }
 - state: next
   en: { when: Next · needs 70 of 105 MPs, what: Parliament sends it to a referendum }
   ru: { when: Далее · нужно 70 из 105 депутатов, what: Парламент выносит проект на референдум }
@@ -26,21 +29,21 @@ seats:
   total: 105
   en:
     held: Civil Contract seats
-    missing: missing to reach 70
+    missing: '%n missing to reach 70'
     total: seats total
     note: Both opposition factions refuse to provide the other six.
     src: Meduza
     url: https://meduza.io/en/news/2026/11/23/armenia-unveils-draft-constitution-removing-reference-to-nagorno-karabakh-reunification-in-concession-to-azerbaijan
   ru:
-    held: мест у «Гражданского договора»
-    missing: не хватает до 70
+    held: места у «Гражданского договора»
+    missing: '%n не хватает до 70'
     total: мест всего
     note: Обе оппозиционные фракции отказываются дать недостающие шесть голосов.
     src: Медуза
     url: https://meduza.io/news/2026/11/23/pashinyan-opublikoval-proekt-novoy-konstitutsii-armenii-po-trebovaniyu-azerbaydzhana-iz-nee-isklyuchili-otsylku-k-vossoedineniyu-s-nagornym-karabahom
   hy:
     held: մանդատ «Քաղաքացիական պայմանագրի» մոտ
-    missing: պակասում է մինչև 70-ը
+    missing: 70-ից պակասում է %n-ը
     total: մանդատ ընդամենը
     note: Ընդդիմադիր երկու խմբակցություններն էլ հրաժարվում են տրամադրել պակասող վեց ձայնը։
     src: Meduza

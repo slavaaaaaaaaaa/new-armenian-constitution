@@ -14,14 +14,14 @@ All content lives in `_data/`:
   (`new`, `chg`, `rem`, `kept`), optional `hot: true` for contested
   points, `en`/`ru`/`hy` text, an optional Armenian `quote`, and `refs`.
 - `ui.yml`: interface strings for each language.
-- `status.yml`: the "Where it stands" panel: `steps`, `seats` and `notes`.
+- `status.yml`: the "Where it stands" panel: `steps`, `seats` and `notes`. A step can list source `links`; in `seats`, `%n` in `missing` stands for the number of missing seats.
 
 A ref is one of:
 
 | Fields                     | Links to                               |
 | -------------------------- | -------------------------------------- |
 | `a`, optional `p`, `pt`    | draft article `a`, part `p`, point `pt` |
-| `cur`, optional `p`        | current constitution article `cur`     |
+| `cur`, optional `p` or `ps`| current constitution article `cur`; `ps` is a range of parts (`3–4`) |
 | `pre: true`                | draft preamble                         |
 | `curpre: true`             | current constitution preamble          |
 | `explainer: true`          | government explainer page              |

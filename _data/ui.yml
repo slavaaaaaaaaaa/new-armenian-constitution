@@ -15,7 +15,8 @@ en:
   readDraft: Read the official draft
   seatsLabel: 'Vote math: the ruling party holds 64 seats, 70 are needed, out of 105'
   about: This site sums up, in plain English, what Armenia's proposed new constitution would change compared with the one in force today. It is meant for anyone who wants to understand the draft without reading all of it in Armenian, and every point links to the official text so you can check it yourself.
-  lastUpdated: Last updated
+  lastUpdated: 'Last updated:'
+  stop: .
   dateFormat: '%-d %b %Y'
   title: 'Armenia''s draft constitution: what changes'
   lede: Each point links to the draft article it describes. Where a point compares the draft with today's rules, it also links to the current article or to a news report. The government's site shows about ten articles per page, so look for the article number and part named in the link.
@@ -28,6 +29,7 @@ en:
   contested: Contested
   art: Art.
   part: part
+  parts: parts
   pt: pt.
   preamble: Preamble
   currentArt: Current constitution, Art.
@@ -53,7 +55,8 @@ ru:
   readDraft: Читать официальный проект
   seatsLabel: 'Голоса: у правящей партии 64 места, нужно 70 из 105'
   about: Этот сайт простым языком рассказывает, что изменит предложенная новая конституция Армении по сравнению с действующей. Он для тех, кто хочет разобраться в проекте, не читая его целиком на армянском; каждый пункт ссылается на официальный текст, чтобы его можно было проверить.
-  lastUpdated: Последнее обновление
+  lastUpdated: 'Последнее обновление:'
+  stop: .
   dateFormat: '%d.%m.%Y'
   title: 'Проект новой конституции Армении: что меняется'
   lede: Каждый пункт ссылается на статью проекта, о которой идёт речь. Если пункт сравнивает проект с нынешними правилами, есть и ссылка на действующую статью или на публикацию в СМИ. Правительственный сайт показывает около десяти статей на странице, поэтому ищите номер статьи и части, указанный в ссылке.
@@ -66,6 +69,7 @@ ru:
   contested: Спорный пункт
   art: Ст.
   part: ч.
+  parts: ч.
   pt: п.
   preamble: Преамбула
   currentArt: Действующая конституция, ст.
@@ -79,7 +83,7 @@ hy:
   draftPill: Նախագիծ · ուժի մեջ չէ
   dates: Հրապարակվել է 23.11.2026 · ստուգվել է 24.11.2026
   glance: Հակիրճ
-  tracked: վերլուծված
+  tracked: ''
   points: { one: կետ, other: կետ }
   contestedN: { one: վիճելի, other: վիճելի }
   sections: Բաժիններ
@@ -91,7 +95,8 @@ hy:
   readDraft: Կարդալ պաշտոնական նախագիծը
   seatsLabel: Ձայներ՝ իշխող կուսակցությունն ունի 64 մանդատ, անհրաժեշտ է 70-ը՝ 105-ից
   about: Այս կայքը պարզ լեզվով ամփոփում է, թե ինչ կփոխի Հայաստանի նոր Սահմանադրության նախագիծը գործող Սահմանադրության համեմատ։ Այն նախատեսված է բոլոր նրանց համար, ովքեր ուզում են հասկանալ նախագիծը՝ առանց այն ամբողջությամբ կարդալու, և յուրաքանչյուր կետ հղում է պաշտոնական տեքստին, որպեսզի կարողանաք ինքներդ ստուգել։
-  lastUpdated: Վերջին թարմացումը
+  lastUpdated: Վերջին թարմացումը՝
+  stop: ։
   dateFormat: '%d.%m.%Y'
   title: Ինչ է փոխում Հայաստանի Սահմանադրության նախագիծը
   lede: Յուրաքանչյուր կետ հղում է նախագծի այն հոդվածին, որը նկարագրում է։ Եթե կետը համեմատում է նախագիծը գործող կանոնների հետ, այն հղում է նաև գործող հոդվածին կամ լրատվական հրապարակմանը։ Կառավարության կայքը մեկ էջում ցույց է տալիս մոտ տասը հոդված, ուստի փնտրեք հղման մեջ նշված հոդվածի և մասի համարը։
@@ -104,6 +109,7 @@ hy:
   contested: Վիճելի
   art: Հոդ.
   part: մաս
+  parts: մաս
   pt: կետ
   preamble: Նախաբան
   currentArt: Գործող Սահմանադրություն, հոդ.
